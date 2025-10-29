@@ -613,52 +613,83 @@
 
   <!-- Start Skills Section -->
 
-  <section id="skills" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
-                  <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                  <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190">
+  <section id="skills" class="skills pt-4">
+  <div class="container">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Core technologies I use to build and ship production-grade systems.</p>
+    </div>
 
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
-              </p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Tools</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
-              </p>
-          </div>
-        </div>
+    <style>
+      #skills .badge { margin: .25rem .35rem .35rem 0; font-weight: 500; }
+      #skills h5 { margin-top: 1rem; margin-bottom: .35rem; }
+    </style>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <h5>Backend</h5>
+        <p>
+          <span class="badge text-bg-secondary">Java 11+</span>
+          <span class="badge text-bg-secondary">Spring Boot</span>
+          <span class="badge text-bg-secondary">Spring MVC</span>
+          <span class="badge text-bg-secondary">Spring Security</span>
+          <span class="badge text-bg-secondary">JPA / Hibernate</span>
+          <span class="badge text-bg-secondary">REST APIs</span>
+          <span class="badge text-bg-secondary">Eureka / Spring Cloud</span>
+        </p>
+
+        <h5>Databases</h5>
+        <p>
+          <span class="badge text-bg-secondary">PostgreSQL</span>
+          <span class="badge text-bg-secondary">MySQL (RDS)</span>
+          <span class="badge text-bg-secondary">Oracle</span>
+          <span class="badge text-bg-secondary">MongoDB Atlas</span>
+        </p>
+
+        <h5>Testing & Quality</h5>
+        <p>
+          <span class="badge text-bg-secondary">JUnit</span>
+          <span class="badge text-bg-secondary">Mockito</span>
+          <span class="badge text-bg-secondary">Cucumber</span>
+          <span class="badge text-bg-secondary">Jasmine</span>
+          <span class="badge text-bg-secondary">Postman</span>
+          <span class="badge text-bg-secondary">SonarQube</span>
+          <span class="badge text-bg-secondary">JaCoCo</span>
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <h5>Frontend</h5>
+        <p>
+          <span class="badge text-bg-secondary">Angular</span>
+          <span class="badge text-bg-secondary">TypeScript</span>
+          <span class="badge text-bg-secondary">HTML5</span>
+          <span class="badge text-bg-secondary">CSS3</span>
+          <span class="badge text-bg-secondary">Bootstrap</span>
+        </p>
+
+        <h5>DevOps & Cloud</h5>
+        <p>
+          <span class="badge text-bg-secondary">Docker</span>
+          <span class="badge text-bg-secondary">Kubernetes (AWS EKS)</span>
+          <span class="badge text-bg-secondary">ArgoCD (GitOps)</span>
+          <span class="badge text-bg-secondary">Jenkins</span>
+          <span class="badge text-bg-secondary">AWS (ALB, EC2, RDS)</span>
+          <span class="badge text-bg-secondary">PCF</span>
+        </p>
+
+        <h5>Tools & Workflow</h5>
+        <p>
+          <span class="badge text-bg-secondary">Git / GitHub / GitLab</span>
+          <span class="badge text-bg-secondary">Maven / Gradle</span>
+          <span class="badge text-bg-secondary">Jira</span>
+          <span class="badge text-bg-secondary">Splunk</span>
+          <span class="badge text-bg-secondary">Agile / Scrum</span>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- End Skills Section -->
 
