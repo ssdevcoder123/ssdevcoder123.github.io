@@ -17,37 +17,63 @@
 </head>
 <body>
   <h1>Restaurant Food Delivery — Microservices on AWS EKS</h1>
-  <p class="muted">Spring Boot microservices deployed to <strong>AWS EKS</strong> with GitOps. Angular frontend, API Gateway/Service Discovery, and automated CI/CD.</p>
+  <p class="muted">
+    Cloud-native microservices with <strong>Spring Boot</strong> and an <strong>Angular</strong> frontend. Automated
+    <strong>CI/CD (Jenkins → Docker)</strong> with <strong>GitOps (ArgoCD)</strong> to <strong>AWS EKS (ALB)</strong>.
+    Service discovery via <strong>Eureka</strong>. Data split across <strong>MySQL (RDS)</strong> and <strong>MongoDB Atlas</strong>.
+  </p>
 
-  <div class="img-box mb-3">
-    <img src="../assets/img/project/restaurant-eksmicroservices-1.png" alt="Architecture">
-  </div>
+  <!-- Screenshot gallery (add/remove boxes as you get more images) -->
+  <div class="img-box mb-3"><img src="../assets/img/project/RestaurantfoodTemplate.png" alt="Architecture"></div>
+  <div class="img-box mb-3"><img src="../assets/img/project/03-jenkins-pipelines.png" alt="Jenkins Pipeline"></div>
+  <div class="img-box mb-3"><img src="../assets/img/project/05-argocd.png" alt="ArgoCD Sync"></div>
 
   <h6>Tech</h6>
   <p>
     <span class="badge bg-secondary">Spring Boot</span>
-    <span class="badge bg-secondary">Eureka</span>
     <span class="badge bg-secondary">Angular</span>
-    <span class="badge bg-secondary">MySQL (RDS)</span>
-    <span class="badge bg-secondary">MongoDB Atlas</span>
+    <span class="badge bg-secondary">Eureka</span>
     <span class="badge bg-secondary">Docker</span>
     <span class="badge bg-secondary">Jenkins</span>
     <span class="badge bg-secondary">ArgoCD</span>
     <span class="badge bg-secondary">AWS EKS + ALB</span>
+    <span class="badge bg-secondary">MySQL (RDS)</span>
+    <span class="badge bg-secondary">MongoDB Atlas</span>
+    <span class="badge bg-secondary">Postman</span>
+    <span class="badge bg-secondary">SonarQube/JaCoCo</span>
   </p>
 
-  <h6>What I built</h6>
+  <h6>Services</h6>
   <ul>
-    <li>Services: FoodCatalog, User, Restaurant, Orders with REST APIs & JPA.</li>
-    <li>Discovery & config via Eureka; API gateway routing.</li>
-    <li>CI/CD: Jenkins → Docker images → ArgoCD GitOps → EKS.</li>
-    <li>Datastores: MySQL (RDS) for core entities; MongoDB Atlas for Orders.</li>
-    <li>Quality gates with SonarQube/JaCoCo; smoke tests via Postman.</li>
+    <li><strong>FoodCatalog</strong> — Items, categories, pricing; JPA + MySQL (RDS).</li>
+    <li><strong>User</strong> — Registration/login, profile; JPA + MySQL (RDS).</li>
+    <li><strong>Restaurant</strong> — Outlet details, menus, availability; JPA + MySQL (RDS).</li>
+    <li><strong>Orders</strong> — Cart, order workflow; stored in <strong>MongoDB Atlas</strong> for flexibility.</li>
+  </ul>
+
+  <h6>Platform & Pipeline</h6>
+  <ul>
+    <li><strong>Build:</strong> Jenkins pipelines compile, test (JUnit/JaCoCo), and run SonarQube quality gates.</li>
+    <li><strong>Containerize:</strong> Docker images pushed to registry; versioned by Git SHA.</li>
+    <li><strong>Deploy:</strong> ArgoCD syncs K8s manifests to <strong>AWS EKS</strong>; traffic via <strong>ALB Ingress</strong>.</li>
+    <li><strong>Operate:</strong> Health checks, rolling updates; smoke tests with Postman; logs in Splunk (if configured).</li>
+  </ul>
+
+  <h6>Highlights / Impact</h6>
+  <ul>
+    <li>Modular microservices with clear bounded contexts and independent deploys.</li>
+    <li>Zero-touch deployments after code merge using GitOps.</li>
+    <li>Data split by access patterns: relational (RDS) vs. document (MongoDB Atlas).</li>
+    <li>Quality gates enforced (SonarQube + JaCoCo) before containerization.</li>
   </ul>
 
   <h6>Links</h6>
   <p>
     <a class="btn btn-sm btn-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering">GitHub Org</a>
+    <!-- Add per-service links if available -->
+    <!-- <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/foodcatalog-service">FoodCatalog Service</a> -->
+    <!-- <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/orders-service">Orders Service</a> -->
   </p>
 </body>
+
 </html>
