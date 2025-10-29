@@ -1,79 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Restaurant Food Delivery — Details</title>
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Food Delivery — Case Study</title>
+
+  <!-- Bootstrap (matches template vendor style) -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
   <style>
-    body { padding: 18px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    h1 { font-size: 1.4rem; margin-bottom: .75rem; }
-    .badge { margin: 0 .25rem .25rem 0; }
-    .img-box { background:#0b1a24; display:flex; align-items:center; justify-content:center; border-radius:8px; padding:10px; }
-    .img-box img { max-width:100%; max-height:360px; object-fit:contain; }
-    .muted { color:#667; font-size:.95rem; }
-    .btn-sm { margin-right: .5rem; }
+    :root { --ink:#0b1a24; --muted:#667; }
+    body { padding:18px; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#fdfdfd; color:#111; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; font-weight:700; }
+    .lead-muted { color:var(--muted); font-size:.96rem; }
+    .badge { margin:0 .25rem .25rem 0; }
+    .btn-sm { margin-right:.5rem; margin-bottom:.4rem; }
+    .img-box { background:var(--ink); display:flex; align-items:center; justify-content:center; border-radius:10px; padding:12px; }
+    .img-box img { max-width:100%; max-height:380px; object-fit:contain; }
+    .small-h6 { margin-top:1rem; font-weight:700; font-size:.92rem; letter-spacing:.2px; }
+    .kpi li { margin-bottom:.25rem; }
+    .stack-badges { margin:.25rem 0 .75rem; }
+    .stack-badges .badge { font-weight:500; }
+    .table-sm td, .table-sm th { padding:.35rem .5rem; vertical-align:top; }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <h1>Restaurant Food Delivery — Microservices on AWS EKS</h1>
-  <p class="muted">
-    Cloud-native microservices with <strong>Spring Boot</strong> and an <strong>Angular</strong> frontend. Automated
-    <strong>CI/CD (Jenkins → Docker)</strong> with <strong>GitOps (ArgoCD)</strong> to <strong>AWS EKS (ALB)</strong>.
-    Service discovery via <strong>Eureka</strong>. Data split across <strong>MySQL (RDS)</strong> and <strong>MongoDB Atlas</strong>.
+  <p class="lead-muted">
+    Cloud-native platform with <strong>Spring Boot microservices</strong> and an <strong>Angular</strong> SPA.
+    End-to-end automation: <strong>Jenkins → Docker → ArgoCD (GitOps)</strong> to <strong>AWS EKS (ALB)</strong>.
+    Discovery via <strong>Eureka</strong>. Data split across <strong>MySQL (RDS)</strong> and <strong>MongoDB Atlas</strong>.
   </p>
 
-  <!-- Screenshot gallery (add/remove boxes as you get more images) -->
-  <div class="img-box mb-3"><img src="../assets/img/project/RestaurantfoodTemplate.png" alt="Architecture"></div>
-  <div class="img-box mb-3"><img src="../assets/img/project/03-jenkins-pipelines.png" alt="Jenkins Pipeline"></div>
-  <div class="img-box mb-3"><img src="../assets/img/project/05-argocd.png" alt="ArgoCD Sync"></div>
-
-  <h6>Tech</h6>
-  <p>
-    <span class="badge bg-secondary">Spring Boot</span>
-    <span class="badge bg-secondary">Angular</span>
-    <span class="badge bg-secondary">Eureka</span>
-    <span class="badge bg-secondary">Docker</span>
-    <span class="badge bg-secondary">Jenkins</span>
-    <span class="badge bg-secondary">ArgoCD</span>
-    <span class="badge bg-secondary">AWS EKS + ALB</span>
-    <span class="badge bg-secondary">MySQL (RDS)</span>
-    <span class="badge bg-secondary">MongoDB Atlas</span>
-    <span class="badge bg-secondary">Postman</span>
-    <span class="badge bg-secondary">SonarQube/JaCoCo</span>
+  <!-- Quick CTAs -->
+  <p class="mb-2">
+    <a class="btn btn-sm btn-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering">GitHub Organization</a>
+    <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/FoodOrder-Fe">Frontend (Angular)</a>
   </p>
 
-  <h6>Services</h6>
-  <ul>
-    <li><strong>FoodCatalog</strong> — Items, categories, pricing; JPA + MySQL (RDS).</li>
-    <li><strong>User</strong> — Registration/login, profile; JPA + MySQL (RDS).</li>
-    <li><strong>Restaurant</strong> — Outlet details, menus, availability; JPA + MySQL (RDS).</li>
-    <li><strong>Orders</strong> — Cart, order workflow; stored in <strong>MongoDB Atlas</strong> for flexibility.</li>
+  <!-- Stack badges -->
+  <div class="stack-badges">
+    <span class="badge text-bg-secondary">Spring Boot 3.x</span>
+    <span class="badge text-bg-secondary">Angular</span>
+    <span class="badge text-bg-secondary">Spring Cloud Eureka</span>
+    <span class="badge text-bg-secondary">Docker</span>
+    <span class="badge text-bg-secondary">Jenkins</span>
+    <span class="badge text-bg-secondary">ArgoCD</span>
+    <span class="badge text-bg-secondary">AWS EKS + ALB</span>
+    <span class="badge text-bg-secondary">MySQL (RDS)</span>
+    <span class="badge text-bg-secondary">MongoDB Atlas</span>
+    <span class="badge text-bg-secondary">SonarQube / JaCoCo</span>
+    <span class="badge text-bg-secondary">Postman</span>
+  </div>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs" id="caseTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">Overview</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="architecture-tab" data-bs-toggle="tab" data-bs-target="#architecture" type="button" role="tab">Architecture</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="cicd-tab" data-bs-toggle="tab" data-bs-target="#cicd" type="button" role="tab">CI/CD & Ops</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab">Services</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="links-tab" data-bs-toggle="tab" data-bs-target="#links" type="button" role="tab">Links</button>
+    </li>
   </ul>
 
-  <h6>Platform & Pipeline</h6>
-  <ul>
-    <li><strong>Build:</strong> Jenkins pipelines compile, test (JUnit/JaCoCo), and run SonarQube quality gates.</li>
-    <li><strong>Containerize:</strong> Docker images pushed to registry; versioned by Git SHA.</li>
-    <li><strong>Deploy:</strong> ArgoCD syncs K8s manifests to <strong>AWS EKS</strong>; traffic via <strong>ALB Ingress</strong>.</li>
-    <li><strong>Operate:</strong> Health checks, rolling updates; smoke tests with Postman; logs in Splunk (if configured).</li>
-  </ul>
+  <div class="tab-content pt-3" id="caseTabsContent">
+    <!-- Overview -->
+    <div class="tab-pane fade show active" id="overview" role="tabpanel">
+      <ul class="kpi">
+        <li>💡 <strong>Goal:</strong> production-style microservices platform with automated GitOps deployments.</li>
+        <li>🧩 <strong>Pattern:</strong> service registry (Eureka), API routing, polyglot persistence (RDS + Atlas).</li>
+        <li>🛡️ <strong>Quality:</strong> SonarQube gates + JaCoCo coverage before containerization.</li>
+        <li>📈 <strong>Impact:</strong> zero-touch deploy after merge; fast, consistent rollouts via ArgoCD.</li>
+      </ul>
+      <div class="small-h6">Screenshots</div>
+      <div class="img-box mb-3"><img src="../assets/img/project/RestaurantfoodTemplate.png" alt="Architecture"></div>
+    </div>
 
-  <h6>Highlights / Impact</h6>
-  <ul>
-    <li>Modular microservices with clear bounded contexts and independent deploys.</li>
-    <li>Zero-touch deployments after code merge using GitOps.</li>
-    <li>Data split by access patterns: relational (RDS) vs. document (MongoDB Atlas).</li>
-    <li>Quality gates enforced (SonarQube + JaCoCo) before containerization.</li>
-  </ul>
+    <!-- Architecture -->
+    <div class="tab-pane fade" id="architecture" role="tabpanel">
+      <div class="img-box mb-3"><img src="../assets/img/project/RestaurantfoodTemplate.png" alt="Architecture"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="small-h6">Core Components</div>
+          <ul>
+            <li>Angular SPA consuming REST APIs via gateway/routing.</li>
+            <li>Spring Boot microservices: FoodCatalogue, User, Restaurant, Orders.</li>
+            <li>Discovery & routing with <strong>Eureka</strong> and Ingress/ALB on EKS.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="small-h6">Data Layer</div>
+          <ul>
+            <li>MySQL (RDS) for relational entities (users, menus, restaurants).</li>
+            <li>MongoDB Atlas for flexible order/cart documents.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <h6>Links</h6>
-  <p>
-    <a class="btn btn-sm btn-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering">GitHub Org</a>
-    <!-- Add per-service links if available -->
-    <!-- <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/foodcatalog-service">FoodCatalog Service</a> -->
-    <!-- <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/orders-service">Orders Service</a> -->
-  </p>
+    <!-- CI/CD & Ops -->
+    <div class="tab-pane fade" id="cicd" role="tabpanel">
+      <div class="img-box mb-3"><img src="../assets/img/project/03-jenkins-pipelines.png" alt="Jenkins Pipeline"></div>
+      <ul>
+        <li><strong>Build:</strong> Jenkins multi-branch → compile, unit tests, SonarQube → Docker build → push (tagged by Git SHA).</li>
+        <li><strong>Deploy:</strong> ArgoCD auto-sync applies K8s manifests to <strong>AWS EKS</strong>; ALB ingress routes traffic.</li>
+        <li><strong>Operate:</strong> Actuator health checks; Postman smoke; logs/metrics in Splunk & CloudWatch.</li>
+      </ul>
+      <div class="img-box mb-3"><img src="../assets/img/project/05-argocd.png" alt="ArgoCD Sync"></div>
+    </div>
+
+    <!-- Services -->
+    <div class="tab-pane fade" id="services" role="tabpanel">
+      <table class="table table-bordered table-sm align-middle">
+        <thead class="table-light">
+          <tr><th>Service</th><th>Purpose</th><th>Storage</th><th>Repo</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FoodCatalogue-MS</strong></td>
+            <td>Items, categories, pricing</td>
+            <td>MySQL (RDS)</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/foodcatalogue-MS">Repo</a></td>
+          </tr>
+          <tr>
+            <td><strong>Restaurant-MS</strong></td>
+            <td>Restaurants, menus, availability</td>
+            <td>MySQL (RDS)</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/Restaurant-MS">Repo</a></td>
+          </tr>
+          <tr>
+            <td><strong>User-MS</strong></td>
+            <td>User registration/auth, profiles</td>
+            <td>MySQL (RDS)</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/User-MS">Repo</a></td>
+          </tr>
+          <tr>
+            <td><strong>Order-MS</strong></td>
+            <td>Cart & order workflow</td>
+            <td>MongoDB Atlas</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/Order-MS">Repo</a></td>
+          </tr>
+          <tr>
+            <td><strong>Eureka-service</strong></td>
+            <td>Service registry & discovery</td>
+            <td>—</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/eureka-service">Repo</a></td>
+          </tr>
+          <tr>
+            <td><strong>FoodOrder-Fe</strong></td>
+            <td>Angular SPA</td>
+            <td>—</td>
+            <td><a target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/FoodOrder-Fe">Repo</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="small-h6">Highlights</div>
+      <ul>
+        <li>Independent deploys per microservice; GitOps ensures auditability/versioned releases.</li>
+        <li>Polyglot persistence: relational for entities; document store for orders/events.</li>
+        <li>Quality gates (SonarQube + JaCoCo) required before image publish.</li>
+      </ul>
+    </div>
+
+    <!-- Links -->
+    <div class="tab-pane fade" id="links" role="tabpanel">
+      <p>
+        <a class="btn btn-sm btn-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering">GitHub Organization</a>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/FoodOrder-Fe">Frontend (Angular)</a>
+      </p>
+      <p>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/foodcatalogue-MS">FoodCatalogue-MS</a>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/Restaurant-MS">Restaurant-MS</a>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/User-MS">User-MS</a>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/Order-MS">Order-MS</a>
+        <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering/eureka-service">Eureka-service</a>
+      </p>
+      <p class="lead-muted mt-2">
+        *Deployed and tested on AWS free-tier infrastructure with production-style CI/CD and GitOps.*
+      </p>
+    </div>
+  </div>
 </body>
-
 </html>
