@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Food Delivery — Details</title>
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding: 18px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    h1 { font-size: 1.4rem; margin-bottom: .75rem; }
+    .badge { margin: 0 .25rem .25rem 0; }
+    .img-box { background:#0b1a24; display:flex; align-items:center; justify-content:center; border-radius:8px; padding:10px; }
+    .img-box img { max-width:100%; max-height:360px; object-fit:contain; }
+    .muted { color:#667; font-size:.95rem; }
+    .btn-sm { margin-right: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>Restaurant Food Delivery — Microservices on AWS EKS</h1>
+  <p class="muted">Spring Boot microservices deployed to <strong>AWS EKS</strong> with GitOps. Angular frontend, API Gateway/Service Discovery, and automated CI/CD.</p>
+
+  <div class="img-box mb-3">
+    <img src="../assets/img/project/restaurant-eksmicroservices-1.png" alt="Architecture">
+  </div>
+
+  <h6>Tech</h6>
+  <p>
+    <span class="badge bg-secondary">Spring Boot</span>
+    <span class="badge bg-secondary">Eureka</span>
+    <span class="badge bg-secondary">Angular</span>
+    <span class="badge bg-secondary">MySQL (RDS)</span>
+    <span class="badge bg-secondary">MongoDB Atlas</span>
+    <span class="badge bg-secondary">Docker</span>
+    <span class="badge bg-secondary">Jenkins</span>
+    <span class="badge bg-secondary">ArgoCD</span>
+    <span class="badge bg-secondary">AWS EKS + ALB</span>
+  </p>
+
+  <h6>What I built</h6>
+  <ul>
+    <li>Services: FoodCatalog, User, Restaurant, Orders with REST APIs & JPA.</li>
+    <li>Discovery & config via Eureka; API gateway routing.</li>
+    <li>CI/CD: Jenkins → Docker images → ArgoCD GitOps → EKS.</li>
+    <li>Datastores: MySQL (RDS) for core entities; MongoDB Atlas for Orders.</li>
+    <li>Quality gates with SonarQube/JaCoCo; smoke tests via Postman.</li>
+  </ul>
+
+  <h6>Links</h6>
+  <p>
+    <a class="btn btn-sm btn-primary" target="_blank" rel="noopener" href="https://github.com/RestaurantFoodOrdering">GitHub Org</a>
+  </p>
+</body>
+</html>
