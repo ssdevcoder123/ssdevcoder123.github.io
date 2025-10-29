@@ -51,6 +51,43 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+/* uniform card layout for projects */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.portfolio-wrap {
+  height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.portfolio-wrap img {
+  max-width: 90%;
+  max-height: 240px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-wrap img:hover {
+  transform: scale(1.03);
+}
+
+/* make sure the title lines align too */
+.portfolio-item h4 {
+  min-height: 48px;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+</style>
 </head>
 
 <body>
@@ -416,7 +453,7 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4>Restaurant Food Delivery — Microservices on AWS EKS</h4></center>
-          <div class="portfolio-wrap" style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff;>
+          <div class="portfolio-wrap">
             <img src="assets/img/project/RestaurantfoodTemplate.png" class="img-fluid" alt="Restaurant EKS Microservices">
             <div class="portfolio-info">
               <div class="portfolio-links">
@@ -431,7 +468,7 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4>Vehicle Insurance Management — Java · JSP · Spring Boot</h4></center>
-          <div class="portfolio-wrap" style="height: 300px; display: flex; align-items: center; justify-content: center; background: #fff;>
+          <div class="portfolio-wrap">
             <img src="assets/img/project/vehicle-insurance-1.png" class="img-fluid" alt="Vehicle Insurance Management System">
             <div class="portfolio-info">
               <div class="portfolio-links">
