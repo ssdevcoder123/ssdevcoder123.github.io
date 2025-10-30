@@ -812,6 +812,31 @@
       </div>
       <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
     </div>
+   <form id="contact-form" class="php-email-form">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required>
+    </div>
+    <div class="col-md-6 form-group mt-3 mt-md-0">
+      <input type="email" class="form-control" name="from_email" id="from_email" placeholder="Your Email" required>
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Tell me about the role / project..." required></textarea>
+  </div>
+
+  <!-- status messages -->
+  <div class="my-3">
+    <div id="form-loading" style="display:none;">Sending…</div>
+    <div id="form-success" class="text-success" style="display:none;">Your message has been sent. Thank you!</div>
+    <div id="form-error" class="text-danger" style="display:none;">Something went wrong. Try again.</div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+
   </section>
 
   <!-- End Contact Section -->
@@ -838,6 +863,49 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // 1. init EmailJS with your PUBLIC KEY
+  (function() {
+    emailjs.init("j9VQ07i-TVuSkBwip");   // e.g. "q1AbcDEFghijkL"
+  })();
+
+  // 2. handle form submit
+  const form = document.getElementById('contact-form');
+  const loadingEl = document.getElementById('form-loading');
+  const successEl = document.getElementById('form-success');
+  const errorEl = document.getElementById('form-error');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    loadingEl.style.display = 'block';
+    successEl.style.display = 'none';
+    errorEl.style.display = 'none';
+
+    const templateParams = {
+      from_name: document.getElementById('from_name').value,
+      from_email: document.getElementById('from_email').value,
+      message: document.getElementById('message').value,
+      time: new Date().toLocaleString()
+    };
+
+    emailjs
+      .send("service_akjx8za", "template_48edrfp", templateParams)
+      .then(function(res) {
+        loadingEl.style.display = 'none';
+        successEl.style.display = 'block';
+        form.reset();
+      })
+      .catch(function(err) {
+        console.error(err);
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+      });
+  });
+</script>
+
 
 </body>
 
