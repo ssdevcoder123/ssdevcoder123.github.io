@@ -92,6 +92,17 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
  <style>
+           
+.education-box {
+  transition: all 0.25s ease;
+}
+
+.education-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
 /* === Scoped fixes for project grid alignment === */
 #portfolio .portfolio-item {
   display: flex;
@@ -275,38 +286,46 @@
 
 
   <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
-    <div class="container">
-    <div class="section-title">
-      <h2>Education</h2>
-    </div>
+<!-- ======= Education Section ======= -->
+<div class="row mt-4" style="margin-left:0;">
+  <div class="col-lg-12">
+    <h5 style="color:#fff; letter-spacing:2px; font-size:.85rem; text-transform:uppercase; margin-bottom:1rem;">
+      Education
+      <span style="display:inline-block; width:90px; height:2px; background:#12d640; margin-left:12px; margin-bottom:3px;"></span>
+    </h5>
 
-    <div class="row">
-      <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-        <div class="col-md-6 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
-             style="padding:0px 0px; padding-bottom: 5px; display: inline-block;">
-          <p style="text-align:left; color:#fff; padding: 5px 10px;">
-            <em>Master of Science in Computer Science</em>
-          </p>
-          <h5 style="text-align:left; padding: 0px 10px;">
-            Missouri State University, Springfield, MO, USA
-          </h5>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="200"
-             style="padding:0px 0px; padding-bottom: 5px; display: inline-block;">
-          <p style="text-align:left; color:#fff; padding: 5px 10px;">
-            <em>Bachelor of Technology in Electronics and Communication Engineering</em>
-          </p>
-          <h5 style="text-align:left; padding: 0px 10px;">
-            K L University, India
-          </h5>
-        </div>
-
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      
+      <!-- Master's -->
+      <div class="education-box"
+           style="background:#0b2b40; border-left:5px solid #12d640; border-radius:6px; padding:20px 25px;
+                  color:#fff; width:95%; max-width:900px;">
+        <p style="font-style:italic; margin-bottom:4px; font-size:0.9rem;">
+          Master of Science in Computer Science
+        </p>
+        <h6 style="font-weight:600; font-size:1.05rem; margin:0;">
+          Missouri State University, Springfield, MO, USA
+        </h6>
       </div>
+
+      <!-- Bachelor's -->
+      <div class="education-box"
+           style="background:#0b2b40; border-left:5px solid #12d640; border-radius:6px; padding:20px 25px;
+                  color:#fff; width:95%; max-width:900px;">
+        <p style="font-style:italic; margin-bottom:4px; font-size:0.9rem;">
+          Bachelor of Technology in Electronics and Communication Engineering
+        </p>
+        <h6 style="font-weight:600; font-size:1.05rem; margin:0;">
+          K L University, India
+        </h6>
+      </div>
+
     </div>
   </div>
+</div>
+<!-- End Education Section -->
+
+<!-- End Education Section -->
 
 
 <!-- ======= Coding Profiles Section ======= -->
