@@ -1,77 +1,37 @@
-# Personal Portfolio 🔥
-> https://rajaprerak.github.io/
+# Mohan S — Full Stack Java & Angular Developer
 
-:star: Star me on GitHub — it helps!
+Welcome to my personal portfolio 🚀 — built to showcase my experience in **Spring Boot microservices**, **Angular front-end development**, and **DevOps deployment** workflows using **Jenkins → Docker → ArgoCD → AWS EKS**.
 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/rajaprerak/rajaprerak.github.io/commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://rajaprerak.github.io/)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/rajaprerak/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+---
 
-### Website Preview
-#### Home Page
-<img src="website_images/HomePage.gif" width="900">
+## 🧑‍💻 About Me
+Full Stack Developer experienced in building **enterprise-grade, microservice-based applications** with **Java, Spring Boot, Angular**, and modern cloud CI/CD pipelines.  
+I enjoy building scalable systems that solve real-world problems — from REST API design to production deployment.
 
+---
 
-#### About Page
-<img src="website_images/AboutPage.png" width="900">
+## ⚙️ Tech Stack
+**Backend:** Java 11+, Spring Boot, Spring Security, JPA/Hibernate, REST APIs  
+**Frontend:** Angular, TypeScript, HTML5, CSS3, Bootstrap  
+**Database:** PostgreSQL, MySQL, MongoDB  
+**DevOps:** Docker, Kubernetes (EKS), ArgoCD (GitOps), Jenkins, SonarQube  
+**Cloud:** AWS (ALB, EC2, RDS), PCF  
+**Other Tools:** Git, Maven, Jira, Postman, Splunk
 
+---
 
-#### Projects Page
-<img src="website_images/ProjectPage.png" width="900">
-  
+## 🧩 Projects
+- **Restaurant Food Delivery System** — Spring Boot microservices deployed to AWS EKS  
+- **Vehicle Insurance Management System** — Java/JSP application with Spring MVC + MySQL  
+- **Developer Portfolio** — This site, deployed via GitHub Pages, EmailJS contact form integration
 
+---
 
-:star: Star me on GitHub — it helps!
+## 📫 Contact
+📍 Missouri, USA  
+📧 [saisiddanaus@gmail.com](mailto:saisiddanaus@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/smv-sai1/) | [GitHub](https://github.com/ssdevcoder123)
 
-## Features 📋
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
-⚡️ Typing animation using `Typed.js`\
-⚡️ Easy to modify
+---
 
-## Installation & Deployment 📦
-- Clone the repository and modify the content of <b>index.html</b> 
-- Add or remove images from `assets/img/` directory as per your requirement.
-- Update the info of `projects` folder according to your need
-- Use [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to create your own website.
-- To deploy your website, first you need to create github repository with name `<your-github-username>.github.io` and push the generated code to the `master` branch.
-
-## Sections 📚
-✔️ About\
-✔️ Interests\
-✔️ Education\
-✔️ Online Certification\
-✔️ Experience\
-✔️ Projects \
-✔️ Skills \
-✔️ Resume\
-✔️ Contact Info
-
-
-
-## Tools Used 🛠️
-* <b>GitHub Pages</b> - To host my static website (HTML, CSS, JS).
-
-## Contributing 💡
-#### Step 1
-
-- **Option 1**
-    - 🍴 Fork this repo!
-
-- **Option 2**
-    - 👯 Clone this repo to your local machine.
-
-
-#### Step 2
-
-- **Build your code** 🔨🔨🔨
-
-#### Step 3
-
-- 🔃 Create a new pull request.
-
-## License
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+> *© 2025 Mohan S. All rights reserved.*
